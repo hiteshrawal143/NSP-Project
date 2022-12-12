@@ -1,0 +1,136 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(45deg,#3e32a8,#e310c7);
+  /*background-image: url(bgimage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  overflow: hidden;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  /*right: 50%;*/
+  transform: translate(-51%,-50%);
+  width: 400px;
+  background: transparent;
+  border-radius: 15px;
+  background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 19px );
+  -webkit-backdrop-filter: blur( 19px );
+  border-radius: 13px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.center h1{ /*for accessing Login word we use in h1 tag in center div in html*/
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid rgb(109, 12, 120);
+} 
+
+.center form{
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+form .txt_field{
+  position: relative;
+  border-bottom: 2px solid rgb(109, 12, 120);
+  margin: 30px;
+}
+
+.txt_field input{
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #ebe8e8;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.txt_field span::before{
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+  top: -5px;
+  color: #000000;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+  width: 100%;
+}
+
+.pass{
+  margin: -5px 0 20px 5px;
+  color: #ebe8e8;
+  cursor: pointer;
+}
+
+.pass:hover{
+  text-decoration: underline;
+}
+
+input[type="submit"]{
+  width: 100%;
+  height: 45px;
+  border: rgba(88, 24, 156, 0.858);
+  background: rgba(88, 24, 156, 0.858);
+  /*box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );*/
+  backdrop-filter: blur( 7px );
+  -webkit-backdrop-filter: blur( 7px );
+  border-radius: 20px;
+  color: #ebe8e8;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover{
+  border-color: rgba(88, 24, 156, 0.858);
+  transition: .5s;
+}
+
+.signup_link{
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #ebe8e8;
+}
+
+.signup_link a{
+  color: rgba(38, 3, 75, 0.886);
+  text-decoration: none;
+}
+
+.signup_link a:hover{
+  text-decoration: underline;
+}
